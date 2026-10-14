@@ -1,0 +1,14 @@
+CREATE TABLE `library_items` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `type` ENUM('movie','tvshow') NOT NULL,
+  `title` VARCHAR(255) NOT NULL,
+  `rating` DECIMAL(3,1) DEFAULT NULL,
+  `year_start` SMALLINT DEFAULT NULL,
+  `year_end` SMALLINT DEFAULT NULL,
+  `creator` VARCHAR(255) DEFAULT NULL,
+  `stars` VARCHAR(255) DEFAULT NULL,
+  `description` TEXT DEFAULT NULL,
+  `image_path` VARCHAR(255) DEFAULT NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
